@@ -13,7 +13,63 @@ public class Student {
     private String email;
     private int yoe;
 
-    public Student(Builder b){
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double getPsp() {
+        return psp;
+    }
+
+    public void setPsp(double psp) {
+        this.psp = psp;
+    }
+
+    public String getBatchName() {
+        return batchName;
+    }
+
+    public void setBatchName(String batchName) {
+        this.batchName = batchName;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getYoe() {
+        return yoe;
+    }
+
+    public void setYoe(int yoe) {
+        this.yoe = yoe;
+    }
+
+    private Student(Builder b){
         this.name = b.name;
         this.age = b.age;
         this.psp = b.psp;
@@ -23,7 +79,12 @@ public class Student {
         this.yoe = b.yoe;
     }
 
-    public static class Builder {
+    public static Builder builder(){
+        Builder b = new Builder();
+        return b;
+    }
+
+     static class Builder {
         private String name;
         private int age;
         private double psp;
@@ -32,10 +93,6 @@ public class Student {
         private String email;
         private int yoe;
 
-        public static Builder builder(){
-            Builder b = new Builder();
-            return b;
-        }
 
         public Builder setName(String name) {
             this.name = name;

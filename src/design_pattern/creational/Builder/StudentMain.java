@@ -3,7 +3,7 @@ package design_pattern.creational.Builder;
 public class StudentMain {
     public static void main(String[] args) {
         System.out.println("welcome to this application");
-        Student s = new Student.Builder()
+        Student s = Student.builder()
                 .setId(1)
                 .setName("John")
                 .setYoe(4)
@@ -13,6 +13,6 @@ public class StudentMain {
                 .setBatchName("some batch name")
                 .build();
 
-        System.out.println(s);
+        System.out.println(s.getName());
     }
 }
