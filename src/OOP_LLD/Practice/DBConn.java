@@ -2,9 +2,9 @@ package OOP_LLD.Practice;
 
 // singleton design pattern
 public class DBConn {
-     String url;
-     String user_name;
-     String password;
+        String url;
+        String user_name;
+        String password;
     private static DBConn obj;
 
     private DBConn(){
