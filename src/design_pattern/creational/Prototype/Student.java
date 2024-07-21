@@ -1,6 +1,6 @@
 package design_pattern.creational.Prototype;
 
-public class Student implements prototype<Student>{
+public class Student implements prototype<Student> {
     private String name;
     private int id;
     private String email;
